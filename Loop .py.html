@@ -1,0 +1,157 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# While Loop
+
+# In[1]:
+
+
+while False:
+    print("hello")
+
+
+# In[1]:
+
+
+while True:         #Will print infinite times, press double zero to stop printing
+    #print("hello")
+
+
+# In[8]:
+
+
+#counting 
+
+counter = 0
+while counter<10:
+    print(counter)
+    counter = counter + 1
+    
+
+
+# In[11]:
+
+
+# For Loop
+
+for i in range(5): #condition
+    print("Hello") # Body / executable code
+    
+
+
+# In[15]:
+
+
+for i in range (5):
+    print("hello python:", i)
+
+
+# In[13]:
+
+
+range(5)
+
+
+# In[14]:
+
+
+list(range(5))
+
+
+# In[16]:
+
+
+my_list = [10,100,1000]
+for i in my_list:
+    print("i is equal to:", i)
+
+
+# In[25]:
+
+
+# If statement : if, else, elif
+
+import numpy as np
+from numpy.random import randn
+
+
+# In[26]:
+
+
+randn()
+
+
+# In[44]:
+
+
+x = randn()
+answer = None
+if x > 1:
+    answer = "greater than 1"
+print(x)
+print(answer)
+
+
+# In[46]:
+
+
+# Nested Statement ---- -2---- -1---0---1---2
+answer = None
+x = randn()
+if x > 1:
+    answer = "Greater than 1"
+else:
+    if x >= -1:
+        answer = "between -1 and 1"
+    else:
+        answer = " less than -1"
+print(x)
+print(answer)
+
+
+# In[47]:
+
+
+# Chained Statement ---- -2---- -1---0---1---2
+answer = None
+x = randn()
+if x>1:
+    answer = "greater than 1"
+elif x >=-1:
+    answer = "between -1 and 1"
+else:
+    answer = "less than -1"
+print(x)
+print(answer)
+
+
+# In[62]:
+
+
+# Project: 1 # references: www.superdatascience
+
+""""Test the Law of Large Numbers for N random normally distributed numbers with
+mean=0 and standard deviation=1
+
+Create a Python script that will count how many of these numbers fall between -1 and 1 
+and divide that by the total quantity N
+You Know that E(X)=68.2% # expected value
+check that the mean(Xn) is closer to E(X) as you rerun our script while increasing N.
+"""
+
+N = input("N: ")
+N = int(N)
+counter = 0 # count of numners between -1 ans 1
+import numpy as np
+from numpy.random import randn
+for i in randn(N):
+    if i > -1 and i < 1:
+        counter = counter + 1
+print(" Number between -1 and 1:", counter, "Mean: ", counter/N)
+
+
+# In[ ]:
+
+
+
+
